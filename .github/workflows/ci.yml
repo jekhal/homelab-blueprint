@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
-      - run: python -m pip install pyyaml==6.0.2
+      - run: python -m pip install pyyaml==6.0.3
       - name: Shell syntax and shellcheck
         run: make lint
       - name: Example configs are coherent (Gatus lint, backup coherence)
@@ -75,7 +75,7 @@ jobs:
           persist-credentials: false
       - uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e # v4.0.1
         with:
-          terraform_version: 1.17.1
+          terraform_version: 1.17.2
           terraform_wrapper: false
       - name: fmt, validate, test (module and example)
         run: make terraform
